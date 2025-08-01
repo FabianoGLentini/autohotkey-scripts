@@ -11,91 +11,22 @@ return
 
 ; -------- Hotstrings --------
 
-#Hotstring B0  ; Prevents automatically backspace the trigger
+#If (mathActive)
 
-::sum::
-if (mathActive)
-    Send, ∑{Space} 
-else
-    Send, sum{Space}
-return
+::sum::∑{Space}
+::prod::∏{Space}
+::forall::∀{Space}
+::exists::∃{Space}
+::in::∈{Space}
+::empty::∅{Space}
+::and::∧{Space}
+::or::∨{Space}
+::not::¬{Space}
+::implies::→{Space}
+::iff::↔{Space}
+::!=::≠{Space}
 
-::prod::
-if (mathActive)
-    Send, ∏{Space}
-else
-    Send, prod{Space}
-return
-
-::forall::
-if (mathActive)
-    Send, ∀{Space} 
-else
-    Send, forall{Space}
-return
-
-::exists::
-if (mathActive)
-    Send, ∃{Space} 
-else
-    Send, exists{Space}
-return
-
-::in::
-if (mathActive)
-    Send, ∈{Space} 
-else
-    Send, in{Space}
-return
-
-::empty::
-if (mathActive)
-    Send, ∅{Space} 
-else
-    Send, empty{Space}
-return
-
-::and::
-if (mathActive)
-    Send, ∧{Space} 
-else
-    Send, and{Space}
-return
-
-::or::
-if (mathActive)
-    Send, ∨{Space} 
-else
-    Send, or{Space}
-return
-
-::not::
-if (mathActive)
-    Send, ¬{Space} 
-else
-    Send, not{Space}
-return
-
-::implies::
-if (mathActive)
-    Send, →{Space} 
-else
-    Send, implies{Space}
-return
-
-::iff::
-if (mathActive)
-    Send, ↔{Space} 
-else
-    Send, iff{Space}
-return
-
-::!=::
-if (mathActive)
-    Send, ≠{Space} 
-else 
-    Send, !={Space}
-return
+#If  ; Reset context back to normal
 
 
 ; -------- Terminate Script --------
