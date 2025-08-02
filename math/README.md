@@ -23,6 +23,7 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 | forall   | ∀             |
 | exists   | ∃             |
 | member   | ∈             |
+| excludes | ∉             |
 | empty    | ∅             |
 | and      | ∧             |
 | or       | ∨             |

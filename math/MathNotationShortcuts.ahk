@@ -19,6 +19,7 @@ return
 ::forall::∀
 ::exists::∃
 ::member::∈
+::excludes::∉
 ::empty::∅
 ::and::∧
 ::or::∨
