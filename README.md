@@ -39,8 +39,9 @@ This is a personal collection primarily for my use.
 Feel free to fork or copy the scripts, but I’m not actively managing pull requests.  
 Issues are welcome if you find bugs or have suggestions.
 
----
-
 ## Author
 
 Created and maintained by [Fabiano Lentini](https://github.com/FabianoGLentini)
+
+\
+MIT-style — free to use, copy, modify, or distribute. No warranty. © 2025 Fabiano Lentini.

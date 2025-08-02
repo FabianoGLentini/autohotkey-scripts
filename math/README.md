@@ -5,6 +5,7 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 ## Features
 
 - Toggle math script mode ON/OFF with **Ctrl + Alt + Shift + M**
+- Visual overlay in the **top-right corner** of your screen shows ✅ (enabled) or ❌ (disabled)
 - When ON, type shortcuts like `sum`, `forall`, or `exists` to insert symbols (e.g., ∑, ∀, ∃)
 - When OFF, shortcuts insert their normal text (e.g., typing `sum` just outputs "sum")
 
@@ -12,7 +13,8 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 
 1. Ensure you have [AutoHotkey](https://www.autohotkey.com/) installed.
 2. Run `MathNotationShortcuts.ahk` by double-clicking it.
-3. Use the following hotstrings when math mode is ON:
+3. You will see a small ✅ icon in the top-right corner when the script is enabled, and ❌ when disabled.
+4. Use the following hotstrings when math mode is ON:
 
 | Shortcut | Output Symbol |
 | -------- | ------------- |
@@ -29,23 +31,13 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 | iff      | ↔             |
 | !=       | ≠             |
 
-4. Press **Ctrl + Alt + Shift + M** to toggle math mode ON or OFF. A message box confirms the current state.
+5. Press **Ctrl + Alt + Shift + M** to toggle math mode ON or OFF. An overlay icon update will confirm the current state in top right corner of your screen.
 
----
+## Contributions
 
-## ⚙️ Configuration
+This is a personal collection primarily for my use.  
+Feel free to fork or copy the scripts, but I’m not actively managing pull requests.  
+Issues are welcome if you find bugs or have suggestions.
 
-- The script saves your toggle preference in `settings.ini` in the same folder.
-- Feel free to customize or add new hotstrings by editing `MathNotationShortcuts.ahk`.
-
----
-
-## 📄 License
-
-MIT License — see the root repo’s [`LICENSE`](../LICENSE) for details.
-
----
-
-## 🤝 Contribution
-
-Suggestions and pull requests welcome! Open an issue or submit changes to improve or add new shortcuts.
+\
+MIT-style — free to use, copy, modify, or distribute. No warranty. © 2025 Fabiano Lentini.
