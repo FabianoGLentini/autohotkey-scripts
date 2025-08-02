@@ -1,18 +1,18 @@
-﻿; Discrete Math Hotkeys with Toggle (no prefix)
-; Toggle with Ctrl + Alt + Shift + M
+﻿#Persistent
+#NoEnv
+SetBatchLines, -1
 
-mathActive := true  ; Start with math hotkeys enabled
+; Start with math hotkeys enabled
+global mathActive := true
+createOverlay()
 
 ^!+m::  ; Ctrl + Alt + Shift + M toggle
     mathActive := !mathActive
-    MsgBox, 64, Math Hotkeys, % Format("Math hotkeys are now {}", (mathActive ? "ENABLED ✅" : "DISABLED ❌"))
-
+    updateOverlay()
 return
 
-; -------- Hotstrings --------
-
+; Hotstrings when mathActive is true
 #If (mathActive)
-
 ::sum::∑{Space}
 ::prod::∏{Space}
 ::forall::∀{Space}
@@ -25,14 +25,34 @@ return
 ::implies::→{Space}
 ::iff::↔{Space}
 ::!=::≠{Space}
+#If
 
-#If  ; Reset context back to normal
-
-
-; -------- Terminate Script --------
+; Exit on Escape
 Esc::
+    Gui, Destroy
+    MsgBox, Exiting Math Notation Shortcuts ahk script!
+    ExitApp   
+return
 
-    MsgBox, Exiting MathNotationShortcuts.ahk script!
-        ExitApp   
+; Overlay GUI
+createOverlay() {
+    global
+    Gui, +AlwaysOnTop -Caption +ToolWindow +E0x20
+    Gui, Margin, 10, 10
+    Gui, Font, s14, Segoe UI
+    Gui, Add, Text, vStatusText cGreen, ✅
+    x := A_ScreenWidth - 50
+    y := 10
+    Gui, Show, x%x% y%y% NoActivate
+}
 
-Return
+updateOverlay() {
+    global mathActive
+    icon := mathActive ? "✅" : "❌"
+    color := mathActive ? "Red" : "Green"
+    GuiControl,, StatusText, %icon%
+    GuiControl, +c%color%, StatusText
+}
+
+
+
