@@ -22,7 +22,7 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 | prod     | ∏             |
 | forall   | ∀             |
 | exists   | ∃             |
-| in       | ∈             |
+| member   | ∈             |
 | empty    | ∅             |
 | and      | ∧             |
 | or       | ∨             |

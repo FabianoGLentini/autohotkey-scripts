@@ -14,18 +14,18 @@ return
 
 ; Hotstrings when mathActive is true
 #If (mathActive)
-::sum::∑{Space}
-::prod::∏{Space}
-::forall::∀{Space}
-::exists::∃{Space}
-::in::∈{Space}
-::empty::∅{Space}
-::and::∧{Space}
-::or::∨{Space}
-::not::¬{Space}
-::implies::→{Space}
-::iff::↔{Space}
-::!=::≠{Space}
+::sum::∑
+::prod::∏
+::forall::∀
+::exists::∃
+::member::∈
+::empty::∅
+::and::∧
+::or::∨
+::not::¬
+::implies::→
+::iff::↔
+::!=::≠
 #If
 
 ; Exit on Escape
