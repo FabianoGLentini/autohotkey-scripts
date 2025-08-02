@@ -31,6 +31,7 @@ An AutoHotkey script providing toggleable hotstrings for quickly typing common d
 | implies  | →             |
 | iff      | ↔             |
 | !=       | ≠             |
+| int      | ℤ             |
 
 5. Press **Ctrl + Alt + Shift + M** to toggle math mode ON or OFF. An overlay icon update will confirm the current state in top right corner of your screen.
 

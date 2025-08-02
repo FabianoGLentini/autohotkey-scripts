@@ -27,6 +27,7 @@ return
 ::implies::→
 ::iff::↔
 ::!=::≠
+::int::ℤ
 #If
 
 ; Exit on Escape
