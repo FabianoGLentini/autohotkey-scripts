@@ -6,6 +6,7 @@ SetBatchLines, -1
 global mathActive := true
 createOverlay()
 
+
 ^!+m::  ; Ctrl + Alt + Shift + M toggle
     mathActive := !mathActive
     updateOverlay()
@@ -48,10 +49,15 @@ createOverlay() {
 
 updateOverlay() {
     global mathActive
+    color := mathActive ? "Green" : "Red"
     icon := mathActive ? "✅" : "❌"
-    color := mathActive ? "Red" : "Green"
+
+    GuiControl, Hide, StatusText
     GuiControl,, StatusText, %icon%
-    GuiControl, +c%color%, StatusText
+    
+    GuiControl, Show, StatusText
+    Gui, Font, c%color%
+    GuiControl, Font, StatusText
 }
 
 
