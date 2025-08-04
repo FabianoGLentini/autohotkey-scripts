@@ -25,10 +25,8 @@ createOverlay()
 #If
 
 ; Exit on Escape
-Esc::
-    Gui, Destroy
-    MsgBox, Exiting Math Notation Shortcuts ahk script!
-    ExitApp   
+Esc::mathExit()
+    
 return
 
 ; Toggle math hotkeys on or off and swaps indicator icon accordingly
@@ -62,5 +60,9 @@ updateOverlay() {
     GuiControl, Font, StatusText
 }
 
-
+mathExit() {
+    Gui, Destroy
+    MsgBox, Exiting Math Notation Shortcuts ahk script!
+    ExitApp   
+}
 
