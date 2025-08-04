@@ -1,24 +1,18 @@
-﻿#Persistent
-#NoEnv
-SetBatchLines, -1
-
-; Start with math hotkeys enabled
+﻿; Start with math hotkeys enabled
 global mathActive := true
 createOverlay()
 
 
-^!+m::  ; Ctrl + Alt + Shift + M toggle
-    mathActive := !mathActive
-    updateOverlay()
-return
+^!+m::toggleMath()  ; Ctrl + Alt + Shift + M toggle
+    
 
 ; Hotstrings when mathActive is true
-#If (mathActive)
+#If mathActive
 ::sum::∑
 ::prod::∏
 ::forall::∀
 ::exists::∃
-::member::∈
+::member::
 ::excludes::∉
 ::empty::∅
 ::and::∧
@@ -36,6 +30,12 @@ Esc::
     MsgBox, Exiting Math Notation Shortcuts ahk script!
     ExitApp   
 return
+
+; Toggle math hotkeys on or off and swaps indicator icon accordingly
+toggleMath() {
+    mathActive := !mathActive
+    updateOverlay()
+}
 
 ; Overlay GUI
 createOverlay() {
